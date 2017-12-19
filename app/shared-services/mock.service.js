@@ -9,29 +9,39 @@
 
     function mockService() {
         var service = {
-            generateTomatos: generateTomatos
+            generateTomatoes: generateTomatoes
         };
 
         return service;
 
-        function generateTomatos(limit) {
-            var tomatos = [];
-            var colors = ["Green", "Yellow", "Orange", "Red", "Brown"];
+        function generateTomatoes(limit) {
+            var tomatoes = [];
+            var colors = [
+                {ID: 1, Title: "Green"}, 
+                {ID: 2, Title: "Yellow"}, 
+                {ID: 3, Title: "Red"}, 
+                {ID: 4, Title: "Brown"}
+            ];
+            var seasons = [
+                {ID: 1, Title: "Spring"}, 
+                {ID: 2, Title: "Summer"}, 
+                {ID: 3, Title: "Fall"}, 
+                {ID: 4, Title: "Winter"}
+            ];
             var ounces = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-            var types = ["Ripe", "Immature", "Rotten"];
             var picked = [true, false];
             
             for (let i= 0; i < limit; i++) {
-                tomatos.push({
-                    "id": _.uniqueId(),
-                    "type": _.sample(types),
+                tomatoes.push({
+                    "ID": parseInt(_.uniqueId()),
+                    "season": _.sample(seasons),
                     "picked": _.sample(picked),
                     "color": _.sample(colors),
                     "ounces": _.sample(ounces)
                 });
             }
             
-            return JSON.stringify(tomatos);
+            return JSON.stringify(tomatoes);
         }
     }
 })(); 

@@ -9,15 +9,15 @@
 
     function restService($http) {
         var service = {
-            getTomatos: getTomatos
+            getTomatoes: getTomatoes
         };
 
         return service;
 
-        function getTomatos() {
+        function getTomatoes() {
             return $http({
                 method: 'GET', 
-                url: 'http://localhost:3000/tomatos'
+                url: 'http://localhost:3000/tomatoes'
             }).then(function(response) {
                 return response.data;
             });

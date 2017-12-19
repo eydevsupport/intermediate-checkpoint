@@ -6,17 +6,17 @@
         .controller('MyFeatureController', MyFeatureController);
     
     MyFeatureController.$inject = [
-        '$scope', 'restService'
+        '$scope', 'restService', 'mockService'
     ];
 
-    function MyFeatureController($scope, restService) {
+    function MyFeatureController($scope, restService, mockService) {
         var vm = this;
         
         activate();
 
         function activate() {
-            restService.getTomatos().then(function(tomatos) {
-                // Process tomatos
+            restService.getTomatoes().then(function(tomatoes) {
+                // Process tomatoes
             })
         }
     }
