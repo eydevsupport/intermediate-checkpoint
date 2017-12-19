@@ -3,31 +3,27 @@
  
     angular
         .module('app')
-        .directive('navigation', navigation);
+        .directive('tomatoNavigation', tomatoNavigation);
  
-    function navigation() {
+    function tomatoNavigation() {
         var directive = {
             scope: {},
             restrict: 'E',
-            controller: NavigationController,
+            controller: TomatoNavigationController,
             bindToController: true,
             controllerAs: 'vm',
-            templateUrl: './app/shared-components/navigation/navigation.directive.html'
+            templateUrl: './app/shared-components/tomato-navigation/tomato-navigation.directive.html'
         };
  
         return directive;
     }
  
-    NavigationController.$inject = [];
+    TomatoNavigationController.$inject = [];
  
-    function NavigationController() {
+    function TomatoNavigationController() {
         var vm = this;
         vm.title = "Big Tomato";
         vm.logoUrl = "../app/assets/images/tomato-logo.png";
-        
-        activate();
-
-        function activate() {}
     }
  })();
  

@@ -40,19 +40,20 @@
 	<!-- Custom Stylesheets -->
 	<link rel="stylesheet" href="./app/assets/stylesheets/main.css" />
 
-    <!-- My Feature -->
-    <script type="text/javascript" src="./app/my-feature/my-feature.routes.js"></script>
-    <script type="text/javascript" src="./app/my-feature/my-feature.controller.js"></script>
+    <!-- Features -->
+    <script type="text/javascript" src="./app/tomato-dashboard/tomato-dashboard.controller.js"></script>
+    <script type="text/javascript" src="./app/tomato-dashboard/tomato-dashboard.routes.js"></script>
 
     <!-- Shared Components -->
-    <script type="text/javascript" src="./app/shared-components/navigation/navigation.directive.js"></script>
+    <script type="text/javascript" src="./app/shared-components/tomato-navigation/tomato-navigation.directive.js"></script>
+    <script type="text/javascript" src="./app/shared-components/tomato-chart/tomato-chart.directive.js"></script>
 
     <!-- Services -->
     <script type="text/javascript" src="./app/shared-services/rest.service.js"></script>
     <script type="text/javascript" src="./app/shared-services/mock.service.js"></script>
 </head>
 <body ng-app="app">    
-    <navigation></navigation>
+    <tomato-navigation></tomato-navigation>
     <div ng-view></div>
 </body>
 </html>

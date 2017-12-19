@@ -54,22 +54,12 @@ html {
 }
 
 body {
-    background: lightblue;
 	color: #333;
-}
-
-h1 {
-	font-size: 5em;
+	padding-top: 50px;
 }
 
 .nav__logo {
 	width: 30px;
 	margin: -5px 0 5px 0;
 	vertical-align: 20px;
-	display: inline-block;
-}
-
-.feature-container {
-	margin-top: 100px;
-	text-align: center;
 }
