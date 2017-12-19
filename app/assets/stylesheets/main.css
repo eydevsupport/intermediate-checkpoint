@@ -50,12 +50,11 @@ table {
 /* END CSS RESET */
 
 html {
-    font-family: 'Lato', Helvetica Neue, helvetica, sans-serif;
+	font-family: 'Lato', Helvetica Neue, helvetica, sans-serif;
 }
 
 body {
-    background: #fff;
-    padding: 50px;
+    background: lightblue;
 	color: #333;
 }
 
@@ -64,8 +63,7 @@ h1 {
 }
 
 .feature-container {
-	padding: 20px;
-	background: #fefefe;
+	margin-top: 100px;
 	text-align: center;
 }
 
@@ -77,6 +75,7 @@ h1 {
 	text-align: center;
 	position: relative;
 	margin: 100px auto;
+	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.6);
 }
 
 .big-tomato__stem--left,
