@@ -1,0 +1,19 @@
+{
+  "name": "intermediate-checkpoint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eydevsupport/intermediate-checkpoint.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eydevsupport/intermediate-checkpoint/issues"
+  },
+  "homepage": "https://github.com/eydevsupport/intermediate-checkpoint#readme"
+}
