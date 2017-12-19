@@ -16,13 +16,17 @@
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    <!-- Angular Charts -->
+    <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="../node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
     
     <!-- Lodash scripts -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.8.2/lodash.min.js"></script>
 
     <!-- App setup & config -->
-	<script type="text/javascript" src="./app.module.js"></script>
-	<script type="text/javascript" src="./app.config.js"></script>
+	<script type="text/javascript" src="./app/app.module.js"></script>
+	<script type="text/javascript" src="./app/app.config.js"></script>
 
     <!-- Allow Promise in IE -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
@@ -34,18 +38,18 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 	
 	<!-- Custom Stylesheets -->
-	<link rel="stylesheet" href="./assets/stylesheets/main.css" />
+	<link rel="stylesheet" href="./app/assets/stylesheets/main.css" />
 
     <!-- My Feature -->
-    <script type="text/javascript" src="./my-feature/my-feature.routes.js"></script>
-    <script type="text/javascript" src="./my-feature/my-feature.controller.js"></script>
+    <script type="text/javascript" src="./app/my-feature/my-feature.routes.js"></script>
+    <script type="text/javascript" src="./app/my-feature/my-feature.controller.js"></script>
 
     <!-- Shared Components -->
-    <script type="text/javascript" src="./shared-components/navigation/navigation.directive.js"></script>
+    <script type="text/javascript" src="./app/shared-components/navigation/navigation.directive.js"></script>
 
     <!-- Services -->
-    <script type="text/javascript" src="./shared-services/rest.service.js"></script>
-    <script type="text/javascript" src="./shared-services/mock.service.js"></script>
+    <script type="text/javascript" src="./app/shared-services/rest.service.js"></script>
+    <script type="text/javascript" src="./app/shared-services/mock.service.js"></script>
 </head>
 <body ng-app="app">    
     <navigation></navigation>

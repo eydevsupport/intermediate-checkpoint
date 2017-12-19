@@ -1,3 +1,4 @@
 angular.module('app', [
-    'ngRoute'
+    'ngRoute',
+    'chart.js'
 ]);

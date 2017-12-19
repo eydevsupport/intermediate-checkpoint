@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "watch-http-server ./app/ -a localhost -o",
+    "dev": "watch-http-server -a localhost -o",
     "api": "json-server --watch db.json"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/eydevsupport/intermediate-checkpoint#readme",
   "dependencies": {
+    "angular-chart.js": "^1.1.1",
     "http-server": "^0.10.0",
     "json-server": "^0.12.1",
     "watch-http-server": "^0.7.6"

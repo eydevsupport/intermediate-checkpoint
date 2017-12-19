@@ -12,7 +12,7 @@
             controller: NavigationController,
             bindToController: true,
             controllerAs: 'vm',
-            templateUrl: './shared-components/navigation/navigation.directive.html'
+            templateUrl: './app/shared-components/navigation/navigation.directive.html'
         };
  
         return directive;
@@ -23,7 +23,7 @@
     function NavigationController() {
         var vm = this;
         vm.title = "Big Tomato";
-        vm.logoUrl = "../../assets/images/tomato-logo.png";
+        vm.logoUrl = "../app/assets/images/tomato-logo.png";
         
         activate();
 
