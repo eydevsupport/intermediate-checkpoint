@@ -62,53 +62,14 @@ h1 {
 	font-size: 5em;
 }
 
+.nav__logo {
+	width: 30px;
+	margin: -5px 0 5px 0;
+	vertical-align: 20px;
+	display: inline-block;
+}
+
 .feature-container {
 	margin-top: 100px;
 	text-align: center;
-}
-
-.big-tomato {
-	background: tomato;
-	height: 500px;
-	width: 500px;
-	border-radius: 50%;
-	text-align: center;
-	position: relative;
-	margin: 100px auto;
-	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.6);
-}
-
-.big-tomato__stem--left,
-.big-tomato__stem--center,
-.big-tomato__stem--right,
-.big-tomato__stem--base {
-	background: green;
-	height: 100px;
-	width: 35px;
-	border-radius: 60%;
-	position: absolute;
-	top: -60px;
-}
-
-.big-tomato__stem--left {
-	left: 185px;
-	transform: rotate(-45deg);
-}
-
-.big-tomato__stem--center {
-	left: 233px;
-	top: -70px;
-	transform: rotate(180deg);
-}
-
-.big-tomato__stem--right {
-	right: 185px;
-	transform: rotate(45deg);
-}
-
-.big-tomato__stem--base {
-	left: 210px;
-	top: 0px;
-	height: 30px;
-	width: 80px;
 }

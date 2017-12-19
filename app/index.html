@@ -40,10 +40,15 @@
     <script type="text/javascript" src="./my-feature/my-feature.routes.js"></script>
     <script type="text/javascript" src="./my-feature/my-feature.controller.js"></script>
 
+    <!-- Shared Components -->
+    <script type="text/javascript" src="./shared-components/navigation/navigation.directive.js"></script>
+
     <!-- Services -->
-    <script type="text/javascript" src="./services/rest.service.js"></script>
+    <script type="text/javascript" src="./shared-services/rest.service.js"></script>
+    <script type="text/javascript" src="./shared-services/mock.service.js"></script>
 </head>
 <body ng-app="app">    
+    <navigation></navigation>
     <div ng-view></div>
 </body>
 </html>

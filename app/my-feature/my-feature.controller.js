@@ -11,18 +11,13 @@
 
     function MyFeatureController($scope, restService) {
         var vm = this;
-        vm.data = {};
         
         activate();
 
         function activate() {
-            Promise.all([
-                // Call data functions
-            ]).then(function(results) {
-                // Save results to vm.data
-            });
+            restService.getTomatos().then(function(tomatos) {
+                // Process tomatos
+            })
         }
-
-        // Create data functions
     }
 })();
