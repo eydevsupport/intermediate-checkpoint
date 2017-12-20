@@ -55,11 +55,40 @@ html {
 
 body {
 	color: #333;
-	padding-top: 50px;
+	padding-top: 72px;
+	background: #fefefe;
+}
+
+h1 {
+	font-size: 1.4em;
 }
 
 .nav__logo {
 	width: 30px;
 	margin: -5px 0 5px 0;
 	vertical-align: 20px;
+}
+
+.tomato-chart {
+	background: white;
+}
+
+/*************************************** 
+ * Tomato Card 
+ **************************************/
+.tomato-card {
+	background: white;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	overflow: hidden;
+}
+
+.tomato-card__header {
+	margin-bottom: 20px;
+	background: #ccc;
+	padding: 12px;
+}
+
+.tomato-card__body {
+	padding: 24px;
 }

@@ -1,3 +1,9 @@
-<div ng-repeat="tomato in vm.tomatoes">
-    {{tomato.color.Title}}
+<section class="container-fluid">
+    <tomato-loading-indicator ng-if="vm.loading"></tomato-loading-indicator>
+    
+    <div class="row">
+        <div class="col-xs-6">
+            <tomato-chart ng-if="!vm.loading" data="vm.tomatoes"></tomato-chart>
+        </div>
+    </div>
 </div>

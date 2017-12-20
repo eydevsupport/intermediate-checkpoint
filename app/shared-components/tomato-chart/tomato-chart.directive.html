@@ -1,2 +1,16 @@
 <!-- Ounces of Tomatoes by Season -->
 <!-- Ounces of Tomatoes by Color -->
+
+<tomato-card header="Tomato Yield">
+    <div class="tomato-chart">
+        <canvas 
+            id="bar" 
+            class="chart chart-bar" 
+            chart-data="vm.chartData.data" 
+            chart-labels="vm.chartData.labels" 
+            chart-series="vm.chartData.series"
+            chart-colors="vm.chartData.colors"
+            chart-options="vm.chartOptions"
+        />
+    </div>
+</tomato-card>

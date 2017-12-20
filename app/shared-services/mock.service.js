@@ -17,10 +17,10 @@
         function generateTomatoes(limit) {
             var tomatoes = [];
             var colors = [
-                {ID: 1, Title: "Green"}, 
-                {ID: 2, Title: "Yellow"}, 
-                {ID: 3, Title: "Red"}, 
-                {ID: 4, Title: "Brown"}
+                {ID: 1, Title: "Green", ColorCode: "#2c973e"}, 
+                {ID: 2, Title: "Yellow", ColorCode: "#ffe102"}, 
+                {ID: 3, Title: "Red", ColorCode: "#ff6347"}, 
+                {ID: 4, Title: "Brown", ColorCode: "#8b4513"}
             ];
             var seasons = [
                 {ID: 1, Title: "Spring"}, 

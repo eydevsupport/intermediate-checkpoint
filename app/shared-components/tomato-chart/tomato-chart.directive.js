@@ -7,7 +7,9 @@
  
     function tomatoChart() {
         var directive = {
-            scope: {},
+            scope: {
+                data: "<"
+            },
             restrict: 'E',
             controller: TomatoChartController,
             bindToController: true,
@@ -22,7 +24,9 @@
  
     function TomatoChartController(tomatoChartService) {
         var vm = this;
-        
+        vm.chartOptions = tomatoChartService.getChartOptions();
+        vm.chartData = tomatoChartService.getChartData(vm.data);
+
         activate();
 
         function activate() {}
