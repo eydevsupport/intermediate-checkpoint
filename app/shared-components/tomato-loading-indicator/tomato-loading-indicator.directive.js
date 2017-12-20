@@ -7,7 +7,9 @@
  
     function tomatoLoadingIndicator() {
         var directive = {
-            scope: {},
+            scope: {
+                text: "@?"
+            },
             restrict: 'E',
             controller: TomatoLoadingIndicatorController,
             bindToController: true,
@@ -22,6 +24,7 @@
  
     function TomatoLoadingIndicatorController() {
         var vm = this;
+        vm.text = "Loading...";
     }
  })();
  
