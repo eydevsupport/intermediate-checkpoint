@@ -5,11 +5,48 @@
     />
     
     <div class="row">
-        <div class="col-xs-6">
-            <tomato-chart ng-if="!vm.loading" data="vm.tomatoes"></tomato-chart>
+        <div class="col-xs-12 col-sm-6">
+            <tomato-chart 
+              ng-if="!vm.loading" 
+              data="vm.tomatoes" 
+              type="Bar" 
+              header="Tomato Yield by Season"
+              horizontal-axis-label="Seasons"
+              vertical-axis-label="Ounces"
+            />
         </div>
-        <div class="col-xs-6">
-            <tomato-chart ng-if="!vm.loading" data="vm.tomatoes"></tomato-chart>
+        <div class="col-xs-12 col-sm-6">
+            <tomato-chart 
+              ng-if="!vm.loading" 
+              data="vm.tomatoes" 
+              type="Line" 
+              header="Tomato Revenue by Season"
+              horizontal-axis-label="Seasons"
+              vertical-axis-label="Revenue ($M)"
+              display-legend="false"
+            />
         </div>
     </div>
-</div>
+</section>
+
+<section class="container-fluid">
+    <tomato-card ng-if="!vm.loading" header="Tomatoes By Farm">
+        <div class="col-xs-12">
+            <uib-tabset>
+                <uib-tab 
+                    index="$index" 
+                    ng-repeat="farm in vm.farms track by $index"
+                    heading="{{farm.Title}}"
+                    ng-click="vm.setActiveTabIndex($index)"
+                />
+            </uib-tabset>
+            <tomato-grid 
+                ng-if="vm.activeTabIndex === $index" 
+                data="vm.tomatoes"
+                ng-repeat="farm in vm.farms track by $index" 
+                list-view="farm.Title"
+                >
+            </tomato-grid>
+        </div>
+    </tomato-card>
+</section>
