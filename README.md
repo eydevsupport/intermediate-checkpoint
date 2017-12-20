@@ -36,7 +36,7 @@ You are now ready to start working on the site. The site is set up with LiveRelo
   - Use git branching (i.e., do not push code to master).
   - Write all angular code (Angular 1) consistent with the [John Papa Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
   - DO NOT USE ES6 or later. 
-  - Stick to the requirements, however, if you feel that there are other opportunities to improve the code of create new features feel free to do so. 
+  - Stick to the requirements, however, if you feel that there are other opportunities to improve the code or create new features feel free to do so. 
 
 ### Navigation
 
