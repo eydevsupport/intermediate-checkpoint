@@ -16,48 +16,33 @@
         return service;    
 
         function getChartData(data) {
-            var dataGroupedByColor = groupDataByColor(data);
-                    
-            _.forEach(dataGroupedByColor, function(color) {
-                console.log(getOunceTotalsByColor(color["Brown"]))
-            })
-
-            var data = {
-                labels: _.keys(_.groupBy(data, 'season.Title')),
+            var result = {
+                labels: ["Spring", "Summer", "Fall", "Winter"],
                 series: _.keys(_.groupBy(data, 'color.Title')),
                 colors: _.keys(_.groupBy(data, 'color.ColorCode')),
-                data: []
+                data: groupDataByColor(data)
             }
-
-            var chartData = [
-                [5, 59, 80, 81],  // brown
-                [28, 48, 40, 19], // yellow
-                [65, 59, 80, 81], // green
-                [28, 48, 40, 19]  // tomato
-            ];
-
-            return data;
-        }
-
-        function getOunceTotalsByColor(seasonsByColor) {
-            var result = [];
-        
-            _.forOwn(seasonsByColor, function(seasonData, seasonName) {
-                var seasonOunceTotal = {};
-                seasonOunceTotal[seasonName] = sumOunces(seasonData);
-                result.push(seasonOunceTotal);
-            });
-
+    
             return result;
         }
 
         function groupDataByColor(data) {
             return _.chain(data)
                 .groupBy('color.Title')
-                .map(function(season, key) {
-                    var result = {};
-                    result[key] = _.groupBy(season, 'season.Title');
-                    return result;
+                .map(function(season) {
+                    return _.chain(season)
+                        .groupBy('season.Title')
+                        .map(function(item, seasonName) {
+                            var result = {};
+                            result[seasonName] = sumOunces(item);
+                            result.Ordinal = item[0].season.Ordinal;
+                            return result;
+                        })
+                        .sortBy('Ordinal')
+                        .map(function(item) {
+                            return _.values(_.omit(item, 'Ordinal'))[0];
+                        })
+                        .value();
                 })
                 .value();
         }
