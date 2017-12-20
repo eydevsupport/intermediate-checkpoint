@@ -98,10 +98,14 @@ h1 {
 /*************************************** 
  * Tomato Grid 
  **************************************/
-.tomato-grid__pagination {
-	position: absolute;
-	top: 0;
-	right: 15px;
+.tomato-grid-panel {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+ .tomato-grid-panel__search-bar {
+	margin-right: auto;
 }
 
 /*************************************** 
@@ -131,7 +135,6 @@ h1 {
 	border-radius: 50%;
 	background-color: tomato;
 	opacity: 0.6;
-	position: absolute;
 	top: 0;
 	left: 0;
 	-webkit-animation: sk-bounce 2.0s infinite ease-in-out;

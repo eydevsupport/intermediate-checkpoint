@@ -1,5 +1,6 @@
 angular.module('app', [
     'ngRoute',
     'chart.js',
-    "ui.bootstrap"
+    'ui.bootstrap',
+    'angularUtils.directives.dirPagination'
 ]);

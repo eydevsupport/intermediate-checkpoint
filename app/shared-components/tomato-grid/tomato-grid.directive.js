@@ -26,6 +26,7 @@
     function TomatoGridController(tomatoGridService) {
         var vm = this;
         vm.filteredData = [];
+        vm.searchText = "";
 
         activate();
 
