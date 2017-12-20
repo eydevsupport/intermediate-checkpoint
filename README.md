@@ -73,6 +73,4 @@ Top Navigation: A basic bootstrap top navigation menu directive has been started
     - A user should see a maximum of 15 tomatoes in the grid at once with the option to paginate.
     - A user should be able to search through the data using a text input field.
 
-  Notes: 
-
-    - Utilize the [Pagination Directive](https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination) that is already included in the repository.
+  Note: Utilize the [Pagination Directive](https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination) that is already included in the repository.
