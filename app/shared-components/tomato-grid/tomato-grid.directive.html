@@ -12,7 +12,7 @@
             <dir-pagination-controls></dir-pagination-controls>
         </div>
     </div>
-    <table class="table">
+    <table class="table table-striped table-responsive">
         <thead class="thead-default">
             <tr>
                 <th>Color</th>
@@ -26,7 +26,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr dir-paginate="tomato in vm.filteredData | itemsPerPage: (15) | filter: vm.searchText | orderBy: vm.orderBy">
+            <tr dir-paginate="tomato in vm.filteredData | itemsPerPage: vm.maxPerPage | filter: vm.searchText">
                 <td>{{tomato.color.Title}}</td>
                 <td>{{tomato.cost}}</td>
                 <td>{{tomato.ounces}}</td>

@@ -27,6 +27,7 @@
         var vm = this;
         vm.filteredData = [];
         vm.searchText = "";
+        vm.maxPerPage = 15;
 
         activate();
 
