@@ -18,6 +18,7 @@
 
         function getLineChartData(data) {
             var result = {
+                data: getRevenueBySeason(data),
                 labels: ["Spring", "Summer", "Fall", "Winter"],
                 series: ["Revenue ($M)"],
                 colors: [{
@@ -28,42 +29,44 @@
                     pointBorderColor: "#333",
                     pointHoverBorderColor: "#333",
                     pointBorderWidth: "3"
-                }],
-                data: [_.flatten(groupDataBySeason(data))]
+                }]
             }
             
             return result;
         }
 
-        function groupDataBySeason(data) {
-            return _.chain(data)
-                .groupBy('season.Title')
-                .map(function(seasonData, seasonName) {
-                    var result = {};
-                    result[seasonName] = _.chain(seasonData)
-                        .groupBy("cost")
-                        .reduce(function(memo, seasonDataGroupedByCost) {
-                            return memo + Math.floor(seasonDataGroupedByCost.length * seasonDataGroupedByCost[0].cost);
-                        }, 0)
-                        .value();
+        function getRevenueBySeason(data) {
+            return [
+                _.chain(data)
+                    .groupBy('season.Title')
+                    .map(function(seasonData, seasonName) {
+                        var result = {};
+                        result[seasonName] = _.chain(seasonData)
+                            .groupBy("cost")
+                            .reduce(function(memo, seasonDataGroupedByCost) {
+                                return memo + Math.floor(seasonDataGroupedByCost.length * seasonDataGroupedByCost[0].cost);
+                            }, 0)
+                            .value();
 
-                    return _.values(result);
-                })
-                .value();
+                        return _.values(result);
+                    })
+                    .flatten()
+                    .value()
+            ];
         }
 
         function getBarChartData(data) {
             var result = {
+                data: getYieldBySeason(data),
                 labels: ["Spring", "Summer", "Fall", "Winter"],
                 series: _.keys(_.groupBy(data, 'color.Title')),
-                colors: _.keys(_.groupBy(data, 'color.ColorCode')),
-                data: groupDataByColor(data)
+                colors: _.keys(_.groupBy(data, 'color.ColorCode'))
             }
     
             return result;
         }
 
-        function groupDataByColor(data) {
+        function getYieldBySeason(data) {
             return _.chain(data)
                 .groupBy('color.Title')
                 .map(function(season) {
