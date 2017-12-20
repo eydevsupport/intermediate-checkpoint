@@ -5,7 +5,7 @@ In late 2017, tomato farmer, Toma Toe, purchased struggling tomato sauce manufac
 After sitting through countless demos from various tech companies, farmer Toma decided to engage Ernst & Young LLP (EY). The two parties have discussed and agreed upon the minimal viable product specifications. EY has already started development but requires your help to get them across the finish line. See instructions below for setting up your local dev environment and the tasks assigned to you. 
  
 ## Pre-requisites:
-  - Register for a  github account (if you do not already have one)
+  - Register for a github account (if you do not already have one)
   - Install Dependencies 
   - [Git tools](http://msysgit.github.io/)
   - [Node JS](https://nodejs.org/en/)
@@ -13,7 +13,7 @@ After sitting through countless demos from various tech companies, farmer Toma d
 ## Setting Up Local Repository
 
   - Login to Github. Click the New Repository button. Name your repository "surname-ey-intermediate-checkpoint". 
-  - Set your repository to Public and do not initilaize with a readme. 
+  - Set your repository to Public and do not initialize with a readme. 
   - Click Create Repository.
   - Copy the repository URL. 
   - Using the command line, navigate to a directory on your machine where you would like to save your repository.  
@@ -54,7 +54,7 @@ Top Navigation: A basic bootstrap top navigation menu directive has been started
 
 ### Data Visualization
 
-  - The EY Developer team has already started putting together the required data visluazations. The page contains one data visualization using [Angular-Chart.js](http://jtblin.github.io/angular-chart.js/) to display 'Total Ounces of Tomatoes Produced By Color By Season' in Bar-Chart form. We need your help to create an Angular-Chart.js Line-Chart displaying Total Tomato Revenue by Season. 
+  - The EY Developer team has already started putting together the required data visualization. The page contains one data visualization using [Angular-Chart.js](http://jtblin.github.io/angular-chart.js/) to display 'Total Ounces of Tomatoes Produced By Color By Season' in Bar-Chart form. We need your help to create an Angular-Chart.js Line-Chart displaying Total Tomato Revenue by Season. 
 
   Notes: 
 
