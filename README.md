@@ -12,15 +12,16 @@ After sitting through countless demos from various tech companies, farmer Toma d
 
 ## Setting Up Local Repository
 
-  - Create a directory on your local machine where you would like to save the checkpoint repository. 
-
-  - Using your command line, navigate to the directory you just created. Using git clone, clone the repository onto your local machine. 
-
-  - Using the command line, navigate to the newly cloned repository on your machine.
-
+  - Login to Github. Click the New Repository button. Name your repository "surname-ey-intermediate-checkpoint". 
+  - Set your repository to Public and do not initilaize with a readme. 
+  - Click Create Repository.
+  - Copy the repository URL. 
+  - Using the command line, navigate to a directory on your machine where you would like to save your repository.  
+  - Run `git clone REPOSITORY_URL`. Then in your command line, change directories into the newly created empty repository folder. 
+  - Using windows explorer, unzip the attachment that has been provided to you and save the contents into the directory. 
+  - Now that you have copied the contents it's time to push them up to your remote repository. In your command line, run `git add .` then hit enter. Then run `git commit -m "initial commit"`. Then run `git push`. Now your github repo is ready to go and it's time to install the required dependencies. 
   - Run the command ```npm install```
     - If running this command alters the .package.json file and the .json file, use the ```git checkout``` command to discard those changes. Running ```git status``` will give you instructions on how to use ```git checkout```.
-
   - When you are ready to run the site locally, run the commands:
 	  - ```npm run dev``` 
 	  - ```npm run api```
@@ -56,7 +57,7 @@ Top Navigation: A basic bootstrap top navigation menu directive has been started
   - The EY Developer team has already started putting together the required data visluazations. The page contains one data visualization using [Angular-Chart.js](http://jtblin.github.io/angular-chart.js/) to display 'Total Ounces of Tomatoes Produced By Color By Season' in Bar-Chart form. We need your help to create an Angular-Chart.js Line-Chart displaying Total Tomato Revenue by Season. 
 
   Notes: 
-  
+
     - Make sure to use the tomato-card.directive as a container for your graph.
     - All calculations required for the charts have been provided in the tomato-chart.service. Utilize this as you create the Revenue chart. 
 
