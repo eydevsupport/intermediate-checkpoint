@@ -8,7 +8,8 @@
     function tomatoGrid() {
         var directive = {
             scope: {
-                data: "<"
+                data: "<",
+                listView: "<"
             },
             restrict: 'E',
             controller: TomatoGridController,
@@ -24,11 +25,28 @@
  
     function TomatoGridController(tomatoGridService) {
         var vm = this;
+        vm.filteredData = [];
+        vm.itemsPerPage = 50;
+        vm.currentPage = 1;
 
-            console.log('grid tomatoes', vm.data)
         activate();
 
-        function activate() {}
+        function activate() {
+            getFilteredData(vm.data, vm.listView);
+        }
+
+        function getFilteredData(data, filter) {
+            if (filter) {
+                vm.filteredData = tomatoGridService.filterDataByFarm(data, filter);
+            } else {
+                vm.filteredData = vm.data;
+            }
+        }
+
+        function pageChanged() {
+            console.log('currentpage',vm.currentPage)
+        }
+
     }
  })();
  

@@ -1,24 +1,35 @@
-<tomato-card header="test">
-    <div class="panel panel-default">
-
-
-        <table class="table">
+<div class="panel panel-default">
+    <table class="table">
+        <thead class="thead-default">
             <tr>
-                <th></th>
-                <th></th>
-
+                <th>Color</th>
+                <th>Cost</th>
+                <th>Ounces</th>
+                <th>Picked?</th>
+                <th>Season</th>
             </tr>
-
             <tr>
-                <td></td>
-                <td></td>
-                
+                <th class="tomato-grid__pagination">
+                    
+                    <uib-pagination 
+                        total-items="vm.filteredData.length"
+                        ng-model="vm.currentPage"
+                        items-per-page="vm.itemsPerPage"
+                        ng-changed="pageChanged()"
+                    >
+                    </uib-pagination>
+                </th>
             </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="tomato in vm.filteredData">
+                <td>{{tomato.color.Title}}</td>
+                <td>{{tomato.cost}}</td>
+                <td>{{tomato.ounces}}</td>
+                <td>{{tomato.picked}}</td>
+                <td>{{tomato.season.Title}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-
-        </table>
-
-    </div>
-
-
-</tomato-card>

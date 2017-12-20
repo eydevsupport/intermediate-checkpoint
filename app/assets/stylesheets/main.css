@@ -94,6 +94,15 @@ h1 {
 }
 
 /*************************************** 
+ * Tomato Grid 
+ **************************************/
+.tomato-grid__pagination {
+	position: absolute;
+	top: 0;
+	right: 15px;
+}
+
+/*************************************** 
  * Tomato Loading Indicator
  **************************************/
 .tomato-loading-indicator {

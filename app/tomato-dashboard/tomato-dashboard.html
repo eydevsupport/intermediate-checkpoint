@@ -15,9 +15,23 @@
 </section>
 
 <section class="container-fluid">
-    <div class="row">
+    <tomato-card header="test">
         <div class="col-xs-12">
-            <tomato-grid ng-if="!vm.loading" data="vm.tomatoes"></tomato-grid>
+            <uib-tabset>
+                <uib-tab 
+                    index="$index" 
+                    ng-repeat="farm in vm.farms track by $index"
+                    heading="{{farm.Title}}"
+                    ng-click="vm.setActiveTabIndex($index)"
+                />
+            </uib-tabset>
+            <tomato-grid 
+                ng-if="vm.activeTabIndex === $index" 
+                data="vm.tomatoes"
+                ng-repeat="farm in vm.farms track by $index" 
+                list-view="farm.Title"
+                >
+            </tomato-grid>
         </div>
-    </div>
+    </tomato-card>
 </section>
