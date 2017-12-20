@@ -25,7 +25,7 @@ After sitting through countless demos from various tech companies, farmer Toma d
 	  - ```npm run dev``` 
 	  - ```npm run api```
 
-Note: The command ```npm run dev``` runs a local server on your machine that hosts the site. The command ```npm run api``` runs a mock api that hosts all of the data for the assessment.  
+Note: You will need to run these commands in seperate command line windows. The command ```npm run dev``` runs a local server on your machine that hosts the site. The command ```npm run api``` runs a mock api that hosts all of the data for the assessment.  
 
 You are now ready to start working on the site. The site is set up with LiveReload. This means that when you save your code in your text editor, the page will automatically reload for you. We have noticed that there are a few instances where the LiveReload can lag, so if you are not seeing your changes immediately, give it a few seconds to catch up. 
 
