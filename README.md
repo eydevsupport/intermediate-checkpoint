@@ -25,7 +25,7 @@ After sitting through countless demos from various tech companies, farmer Toma d
 	  - ```npm run dev``` 
 	  - ```npm run api```
 
-Note: You will need to run these commands in seperate command line windows. The command ```npm run dev``` runs a local server on your machine that hosts the site. The command ```npm run api``` runs a mock api that hosts all of the data for the assessment.  
+Note: You will need to run these commands in separate command line windows. The command ```npm run dev``` runs a local server on your machine that hosts the site. The command ```npm run api``` runs a mock api that hosts all of the data for the assessment.  
 
 You are now ready to start working on the site. The site is set up with LiveReload. This means that when you save your code in your text editor, the page will automatically reload for you. We have noticed that there are a few instances where the LiveReload can lag, so if you are not seeing your changes immediately, give it a few seconds to catch up. 
 
@@ -37,11 +37,38 @@ You are now ready to start working on the site. The site is set up with LiveRelo
   - Write all angular code (Angular 1) consistent with the [John Papa Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
   - DO NOT USE ES6 or later. 
   - Stick to the requirements, however, if you feel that there are other opportunities to improve the code or create new features feel free to do so. 
+  - Remember, styling is important! This is going directly to a client. Feel free to add all custom styles to the main.css file.
+  - Your application should be mobile friendly. 
+  - The application requires you to use Toma's Tomato Farm API. The API allows you to retrieve Tomato and Farm information. 
+    - The API has the following endpoints:
+      - `http://localhost:3000/tomatoes` - Get All Tomatoes
+      - `http://localhost:3000/farms` - Get All Farms
 
 ### Navigation
 
 Top Navigation: A basic bootstrap top navigation menu directive has been started for you. Use the bootstrap [nav-bar docs](https://getbootstrap.com/docs/3.3/components/#navbar) to implement the following features:
+  - Add ```tomato-logo.png``` image to the left side of the navigation menu. See screenshot below:
+  
+   ![nav-logo](https://github.com/eydevsupport/intermediate-checkpoint/tree/master/app/assets/images/readme-images/top_nav_log.png)
 
 ### Data Visualization
 
+  - The EY Developer team has already started putting together the required data visluazations. The page contains one data visualization using [Angular-Chart.js](http://jtblin.github.io/angular-chart.js/) to display 'Total Ounces of Tomatoes Produced By Color By Season' in Bar-Chart form. We need your help to create an Angular-Chart.js Line-Chart displaying Total Tomato Revenue by Season. 
+
+  Notes: 
+    - Make sure to use the tomato-card.directive as a container for your graph.
+    - All calculations required for the charts have been provided in the tomato-chart.service. Utilize this as you create the Revenue chart. 
+
 ### Grid Display
+
+  - Toma would also like to see an inline grid display of all the tomatoes by farm. See user stories below for specific requirements:
+
+  User Stories:
+    - A user should only see tomatoes for one farm at a time.
+    - A user should be able to select different farms from a tabbed menu at the top of the grid.
+    - A user should see the following columns: 'Color', 'Cost, 'Ounces', 'Picked?' and 'Season'.
+    - A user should see a maximum of 15 tomatoes in the grid at once with the option to paginate.
+    - A user should be able to search through the data using a text input field.
+
+  Notes: 
+    - Utilize the [Pagination Directive](https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination) that is already included in the repository.
