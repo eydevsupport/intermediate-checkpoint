@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+    <div class="panel-body tomato-grid-panel">
+        <div class="tomato-grid-panel__search-bar input-group col-sm-4">
+            <input type="text" class="form-control" placeholder="Search..." ng-model="vm.searchText">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button"> 
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+            </span>
+        </div>
+        <div class="tomato-grid-panel__pagination">
+            <dir-pagination-controls></dir-pagination-controls>
+        </div>
+    </div>
+    <table class="table table-striped table-responsive">
+        <thead class="thead-default">
+            <tr>
+                <th>Color</th>
+                <th>Cost</th>
+                <th>Ounces</th>
+                <th>Picked?</th>
+                <th>Season</th>
+            </tr>
+            <tr>
+            
+            </tr>
+        </thead>
+        <tbody>
+            <tr dir-paginate="tomato in vm.filteredData | itemsPerPage: vm.maxPerPage | filter: vm.searchText">
+                <td>{{tomato.color.Title}}</td>
+                <td>{{tomato.cost}}</td>
+                <td>{{tomato.ounces}}</td>
+                <td>{{tomato.picked}}</td>
+                <td>{{tomato.season.Title}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

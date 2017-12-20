@@ -27,4 +27,26 @@
             />
         </div>
     </div>
-</div>
+</section>
+
+<section class="container-fluid">
+    <tomato-card ng-if="!vm.loading" header="Tomatoes By Farm">
+        <div class="col-xs-12">
+            <uib-tabset>
+                <uib-tab 
+                    index="$index" 
+                    ng-repeat="farm in vm.farms track by $index"
+                    heading="{{farm.Title}}"
+                    ng-click="vm.setActiveTabIndex($index)"
+                />
+            </uib-tabset>
+            <tomato-grid 
+                ng-if="vm.activeTabIndex === $index" 
+                data="vm.tomatoes"
+                ng-repeat="farm in vm.farms track by $index" 
+                list-view="farm.Title"
+                >
+            </tomato-grid>
+        </div>
+    </tomato-card>
+</section>
