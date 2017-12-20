@@ -26,8 +26,6 @@
     function TomatoGridController(tomatoGridService) {
         var vm = this;
         vm.filteredData = [];
-        vm.itemsPerPage = 50;
-        vm.currentPage = 1;
 
         activate();
 
@@ -41,10 +39,6 @@
             } else {
                 vm.filteredData = vm.data;
             }
-        }
-
-        function pageChanged() {
-            console.log('currentpage',vm.currentPage)
         }
 
     }
