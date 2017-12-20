@@ -1,11 +1,22 @@
-<tomato-card header="Tomato Yield">
-    <div class="tomato-chart">
+<tomato-card header="{{vm.header}}">
+    <div class="tomato-chart" ng-switch="vm.type">
         <canvas 
+            ng-switch-when="Bar"
             id="bar" 
             class="chart chart-bar" 
             chart-data="vm.chartData.data" 
             chart-labels="vm.chartData.labels" 
             chart-series="vm.chartData.series"
+            chart-colors="vm.chartData.colors"
+            chart-options="vm.chartOptions"
+        />
+
+        <canvas
+            ng-switch-when="Line"
+            class="chart chart-line" 
+            chart-data="vm.chartData.data"
+            chart-labels="vm.chartData.labels" 
+            chart-series="vm.chartData.series" 
             chart-colors="vm.chartData.colors"
             chart-options="vm.chartOptions"
         />
