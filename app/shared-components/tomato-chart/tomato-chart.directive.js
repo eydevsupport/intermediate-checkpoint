@@ -8,7 +8,12 @@
     function tomatoChart() {
         var directive = {
             scope: {
-                data: "<"
+                data: "<",
+                type: "@",
+                header: "@?",
+                horizontalAxisLabel: "@?",
+                verticalAxisLabel: "@?",
+                displayLegend: "<?"
             },
             restrict: 'E',
             controller: TomatoChartController,
@@ -24,12 +29,12 @@
  
     function TomatoChartController(tomatoChartService) {
         var vm = this;
-        vm.chartOptions = tomatoChartService.getChartOptions();
-        vm.chartData = tomatoChartService.getChartData(vm.data);
-
-        activate();
-
-        function activate() {}
+        var chartServiceFunctionName = "get" + vm.type + "ChartData";
+        vm.chartData = tomatoChartService[chartServiceFunctionName](vm.data, vm.type);
+        vm.chartOptions = tomatoChartService.getChartOptions(
+            vm.horizontalAxisLabel, vm.verticalAxisLabel, 
+            vm.displayLegend
+        );
     }
  })();
  

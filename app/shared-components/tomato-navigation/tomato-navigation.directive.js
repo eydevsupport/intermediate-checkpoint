@@ -22,7 +22,7 @@
  
     function TomatoNavigationController() {
         var vm = this;
-        vm.title = "Big Tomato";
+        vm.title = "Big Tomato Sauce Co.";
         vm.logoUrl = "../app/assets/images/tomato-logo.png";
     }
  })();
