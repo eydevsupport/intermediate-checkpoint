@@ -44,4 +44,6 @@ Top Navigation: A basic bootstrap top navigation menu directive has been started
 
 ### Data Visualization
 
+  - The EY Developer team has already started putting together the required data visluazations. The page contains one data visualization using Angular-Chart.js to display 'Total Ounces of Tomatoes Produced By Color By Season' in Bar-Chart form. We need your help to create an Angular-Chart.js Line-Chart displaying Total Tomoato Revnue by Season. 
+
 ### Grid Display
