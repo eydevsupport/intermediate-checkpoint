@@ -56,7 +56,7 @@ html {
 body {
 	color: #333;
 	padding-top: 72px;
-	background: #fefefe;
+	background: #fff;
 	font-size: 16px;
 }
 
@@ -72,6 +72,17 @@ h1 {
 
 .tomato-chart {
 	background: white;
+}
+
+/*************************************** 
+ * Tomato Navigation
+ **************************************/
+.tomato-navigation {
+	background-image: url("../images/yellow-pattern.png");
+}
+
+.tomato-navigation__title {
+	font-weight: bold;
 }
 
 /*************************************** 
