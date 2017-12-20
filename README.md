@@ -49,7 +49,7 @@ You are now ready to start working on the site. The site is set up with LiveRelo
 Top Navigation: A basic bootstrap top navigation menu directive has been started for you. Use the bootstrap [nav-bar docs](https://getbootstrap.com/docs/3.3/components/#navbar) to implement the following features:
   - Add ```tomato-logo.png``` image to the left side of the navigation menu. See screenshot below:
   
-   ![nav-logo](https://github.com/eydevsupport/intermediate-checkpoint/tree/master/app/assets/images/readme-images/top_nav_log.png)
+   ![nav-logo](https://github.com/eydevsupport/intermediate-checkpoint/blob/master/app/assets/images/readme-images/top_nav_logo.png)
 
 ### Data Visualization
 
